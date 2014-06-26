@@ -81,15 +81,15 @@ class prstex(Magics):
         return result
 
 @magics_class
-class prstex(Magics):
+class chptex(Magics):
 
     @cell_magic
-    def prstex(self, line, cell):
-        """Generate and display a prs diagram using LaTeX/prslatex
+    def chptex(self, line, cell):
+        """Generate and display a chp using LaTeX/prslatex
         
         Usage:
         
-            %prstex [key1=value1] [key2=value2] ...
+            %chptex [key1=value1] [key2=value2] ...
 
             Possible keys and default values are
 
