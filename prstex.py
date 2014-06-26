@@ -7,7 +7,7 @@ from IPython.core.magic import magics_class, cell_magic, Magics
 from IPython.display import Image, SVG
 
 latex_template_chp = r"""\documentclass{article}
-\usepackage[%s]{csp}
+\usepackage[%s]{prs}
 \begin{document}
 \thispagestyle{empty}
 
