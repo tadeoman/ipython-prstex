@@ -7,13 +7,13 @@ from IPython.core.magic import magics_class, cell_magic, Magics
 from IPython.display import Image, SVG
 
 latex_template_chp = r"""\documentclass{article}
-\usepackage[%s]{prs}
+\usepackage[%s]{csp}
 \begin{document}
 \thispagestyle{empty}
 
-\begin{prs}
+\begin{csp}
 %s
-\end{prs} 
+\end{csp} 
 
 
 \end{document}
