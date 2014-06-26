@@ -133,6 +133,3 @@ def load_ipython_extension(ipython):
     ipython.register_magics(prstex)
     ipython.register_magics(chptex)
 
-
-def load_ipython_extension(ipython):
-    ipython.register_magics(prstex)
