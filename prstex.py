@@ -96,7 +96,7 @@ class chptex(Magics):
                 filename = ipynb-circuitikz-output
                 options =  options to the pdflatexpackage
         """
-        options = {'filename': 'ipynb-circuitikz-output', 'options':''}
+        options = {'filename': 'ipynb-circuitikz-output', 'options':'', 'format':'svg'}
                    
 
 
@@ -123,8 +123,12 @@ class chptex(Magics):
         os.system("pdfcrop %s.pdf %s-tmp.pdf" % (filename, filename))
         os.system("mv %s-tmp.pdf %s.pdf" % (filename, filename))        
 
-        os.system("pdf2svg %s.pdf %s.svg" % (filename, filename))
-        result = SVG(filename=filename + ".svg")
+	if options['format'] == 'png':
+            os.system("convert -density %s %s.pdf %s.png" % (options['dpi'], filename, filename))
+            result = Image(filename=filename + ".png")
+        else:
+            os.system("pdf2svg %s.pdf %s.svg" % (filename, filename))
+            result = SVG(filename + ".svg")
 
         return result
 
