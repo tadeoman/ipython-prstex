@@ -76,7 +76,7 @@ class prstex(Magics):
         os.system("mv %s-tmp.pdf %s.pdf" % (filename, filename))        
 
         os.system("pdf2svg %s.pdf %s.svg" % (filename, filename))
-        result = SVG(filename + ".svg")
+        result = SVG(filename=filename + ".svg")
 
         return result
 
@@ -124,7 +124,7 @@ class chptex(Magics):
         os.system("mv %s-tmp.pdf %s.pdf" % (filename, filename))        
 
         os.system("pdf2svg %s.pdf %s.svg" % (filename, filename))
-        result = SVG(filename + ".svg")
+        result = SVG(filename=filename + ".svg")
 
         return result
 
