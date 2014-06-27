@@ -48,7 +48,7 @@ class prstex(Magics):
                 filename = ipynb-circuitikz-output
                 options =  options to the pdflatexpackage
         """
-        options = {'filename': 'ipynb-circuitikz-output', 'options':'', 'format':'svg'}
+        options = {'filename': 'ipynb-circuitikz-output', 'options':'', 'format':'svg', 'dpi':'200'}
                    
 
 
